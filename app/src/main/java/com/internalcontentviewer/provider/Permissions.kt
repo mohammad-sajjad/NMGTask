@@ -28,6 +28,10 @@ sealed class Permissions(vararg val permissions: String) {
         Manifest.permission.READ_EXTERNAL_STORAGE
     )
 
+    object contacts: Permissions(
+        Manifest.permission.READ_CONTACTS
+    )
+
 
     companion object {
         fun from(permission: String) = when (permission) {
